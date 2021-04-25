@@ -2,18 +2,17 @@ from PyQt5 import QtWidgets
 import sys
 from collections import deque
 
-
 import design
 
 
 def check_deque(f):
     def inner(*args, **kwargs):
         obj, _ = args
-        print(obj)
+        f(obj, **kwargs)
+        print(obj.deq)
         if len(obj.deq) == 3:
-            print('the song will be played')
-        else:
-            f(obj, **kwargs)
+            print('The song will be played')
+            obj.deq.clear()
 
     return inner
 
@@ -30,7 +29,9 @@ class DemoGui(design.Ui_Dialog, QtWidgets.QDialog):
     @check_deque
     def button_clicked(self):
         sender = self.sender()
-        print(sender.text() + ' was pressed')
+        pressed_button = sender.text()
+        if pressed_button not in self.deq:
+            self.deq.append(sender.text())
 
 
 def main():
