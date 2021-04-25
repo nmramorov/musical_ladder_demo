@@ -7,4 +7,4 @@ class Player:
         self.samples_path = samples_path
 
     def play_midi(self):
-        self.players['playsound']()
+        self.players['playsound'](self.samples_path)
