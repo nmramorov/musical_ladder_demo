@@ -1,3 +1,19 @@
-from midi2audio import FluidSynth
+from player import Player
+from os import listdir
+from pathlib import Path
+from threading import Thread
 
-FluidSynth().play_midi('samples/a3.mid')
+
+notes = Path('samples/notes')
+
+
+class StepsListener:
+    def __init__(self):
+        self.player = Player(notes)
+        self.tracks = {i + 1: Thread(target=track, name=f'Note {track}') for i, track in enumerate(sorted(listdir(notes)))}
+
+    def 
+
+
+
+
