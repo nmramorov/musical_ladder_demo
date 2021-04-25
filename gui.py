@@ -1,8 +1,9 @@
 from PyQt5 import QtWidgets
 import sys
 from collections import deque
-from itertools import combinations, product
+from itertools import product
 from random import randint
+from multiprocessing import Process
 
 
 import design
@@ -28,10 +29,14 @@ def check_deque(f):
         f(obj, **kwargs)
         print(obj.deq)
         if len(obj.deq) == 3:
+            if obj.process and obj.process.is_alive():
+                obj.process.terminate()
+
             buttons = tuple(obj.deq.popleft() for i in range(3))
-            print('Song will be played now')
-            Player(obj.buttons_to_songs[buttons]).play_midi()
+            obj.process = Process(target=Player(obj.buttons_to_songs[buttons]).play_midi)
+            obj.process.daemon = True
             obj.deq.clear()
+            obj.process.start()
 
     return inner
 
@@ -42,6 +47,7 @@ class DemoGui(design.Ui_Dialog, QtWidgets.QDialog):
         self.setupUi(self)
         self.deq = deque(maxlen=3)
         self.buttons_to_songs = get_songs_and_buttons_combination()
+        self.process = None
         for i in range(1, 14):
             button = getattr(self, f'pushButton_{i}')
             button.clicked.connect(self.button_clicked)
