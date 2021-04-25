@@ -1,2 +1,2 @@
-midi2audio
-fluidsynth
+playsound
+pyqt5

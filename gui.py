@@ -26,7 +26,6 @@ def check_deque(f):
     def inner(*args, **kwargs):
         obj, _ = args
         f(obj, **kwargs)
-        print(obj.deq)
         if len(obj.deq) == 3:
             if obj.process and obj.process.is_alive():
                 obj.process.terminate()
