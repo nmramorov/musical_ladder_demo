@@ -89,39 +89,67 @@ class Ui_Dialog:
         Dialog.setWindowTitle(_translate("Dialog", "Musical Ladder Demo"))
 
         self.pushButton_1.setText(_translate("Dialog", "1"))
+        self.pushButton_1.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_1.update()
+
         self.pushButton_2.setText(_translate("Dialog", "2"))
+        self.pushButton_2.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_2.update()
+
         self.pushButton_3.setText(_translate("Dialog", "3"))
-        self.pushButton_3.setAutoFillBackground(True)
-        self.pushButton_3.setPalette(palette)
+        self.pushButton_3.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                        'color: black;')
         self.pushButton_3.update()
 
         self.pushButton_4.setText(_translate("Dialog", "4"))
+        self.pushButton_4.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_4.update()
+
         self.pushButton_5.setText(_translate("Dialog", "5"))
+        self.pushButton_5.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_5.update()
+
         self.pushButton_6.setText(_translate("Dialog", "6"))
+        self.pushButton_6.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_6.update()
+
         self.pushButton_7.setText(_translate("Dialog", "7"))
+        self.pushButton_7.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_7.update()
+
         self.pushButton_8.setText(_translate("Dialog", "8"))
+        self.pushButton_8.setStyleSheet('background-color: #ffffff; border: 1px solid black;border-radius: 5px; '
+                                        'color: white;')
+        self.pushButton_8.update()
+
         self.pushButton_9.setText(_translate("Dialog", "9"))
-        self.pushButton_9.setAutoFillBackground(True)
-        self.pushButton_9.setPalette(palette)
+        self.pushButton_9.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                        'color: black;')
         self.pushButton_9.update()
 
         self.pushButton_10.setText(_translate("Dialog", "10"))
-        self.pushButton_10.setAutoFillBackground(True)
-        self.pushButton_10.setPalette(palette)
+        self.pushButton_10.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                         'color: black;')
         self.pushButton_10.update()
 
         self.pushButton_11.setText(_translate("Dialog", "11"))
-        self.pushButton_11.setAutoFillBackground(True)
-        self.pushButton_11.setPalette(palette)
+        self.pushButton_11.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                         'color: black;')
         self.pushButton_11.update()
 
         self.pushButton_12.setText(_translate("Dialog", "12"))
-        self.pushButton_12.setAutoFillBackground(True)
-        self.pushButton_12.setPalette(palette)
+        self.pushButton_12.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                         'selection-color: yellow; color: black;')
         self.pushButton_12.update()
 
         self.pushButton_13.setText(_translate("Dialog", "13"))
-        self.pushButton_13.setAutoFillBackground(True)
-        self.pushButton_13.setPalette(palette)
+        self.pushButton_13.setStyleSheet('background-color: #000000; border: 1px solid black;border-radius: 5px; '
+                                         'color: black;')
         self.pushButton_13.update()
 

@@ -1,14 +1,13 @@
-from PyQt5 import QtWidgets
 import sys
 from collections import deque
 from itertools import product
-from random import randint
 from multiprocessing import Process
+from random import randint
 
+from PyQt5 import QtWidgets
 
 import design
 from player import Player
-
 
 songs = ['samples/ape_the_bass.wav',
          'samples/etman.wav',
